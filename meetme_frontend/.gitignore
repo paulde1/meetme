@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+meetme_frontend/node_modules
+meetme_frontend/.pnp
+.pnp.js
+.env
+
+# testing
+meetme_frontend/coverage
+
+# production
+meetme_frontend/build
+
+
+# misc
+
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+secrets.js
+node_modules
+meetme_frontend/node_modules
+meetme_frontend/.env
