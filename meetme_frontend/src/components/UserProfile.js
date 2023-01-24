@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
-
 import { userCreatedPinsQuery, userQuery, userSavedPinsQuery } from '../utils/data';
 import { client } from '../client';
 import MasonryLayout from './MasonryLayout';
@@ -73,9 +71,9 @@ const UserProfile = () => {
           {user.userName}
         </h1>
         <div className="absolute top-0 z-1 right-0 p-2">
-          {userId === User.sub && (
-                <div id = 'signOutDiv' className ="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none shadow-md" onClick={logout()}> Sign out</div>
-          )}
+          {userId === user._id && (
+                <div id = 'signOutDiv' className ="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none shadow-md" onClick={logout}> Sign out</div>
+           )}
         </div>
       </div>
       <div className="text-center mb-7">

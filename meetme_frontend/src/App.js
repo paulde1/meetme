@@ -5,6 +5,7 @@ import Home from './container/Home'
 import { fetchUser } from './utils/fetchUser'
 const App = () => {
   const navigate = useNavigate()
+   
   useEffect(()=> {
     const user = fetchUser();
     if(!user) navigate ('/login')
@@ -12,8 +13,8 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path='login' element = {<Login/>} />
       <Route/>
+      <Route path='login' element = {<Login/>} />
       <Route path='/*' element = {<Home/>} />
     </Routes>
   )

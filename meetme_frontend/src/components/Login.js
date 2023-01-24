@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import shareVideo from '../assets/share.mp4'
 import logo from '../assets/logowhite.png'
 import { client } from '../client'
-// import { REACT_APP_GOOGLE_API_TOKEN } from '../secrets'
-
 
 const Login = () => {
   const navigate = useNavigate()
@@ -30,13 +28,9 @@ const Login = () => {
   }
 useEffect(()=> {
 /*global google*/
-// const token = REACT_APP_GOOGLE_API_TOKEN
-// console.log(token, "goog")
-// console.log(process.env.REACT_APP_SANITY_PROJECT_ID, 'process')
 
 google.accounts.id.initialize({
   client_id:process.env.REACT_APP_GOOGLE_API_TOKEN,
-  // client_id:"402757595764-689dojko84cr3pu1g3jo6th04aus43f9.apps.googleusercontent.com" ,
   callback: responseGoogle
 });
 google.accounts.id.renderButton(
@@ -63,8 +57,6 @@ google.accounts.id.renderButton(
         </div>
       <div className='shadow-2xl'>
     <div id = 'signInDiv' className ="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"></div>
-
-    
           </div>
 
         </div>
