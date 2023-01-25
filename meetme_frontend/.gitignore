@@ -11,8 +11,8 @@ meetme_frontend/coverage
 
 # production
 meetme_frontend/build
-
-
+meetme_frontend/node_modules
+build
 # misc
 
 .DS_Store
@@ -29,3 +29,4 @@ secrets.js
 node_modules
 meetme_frontend/node_modules
 meetme_frontend/.env
+meetme_frontend/build
